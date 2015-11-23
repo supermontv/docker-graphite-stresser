@@ -14,11 +14,16 @@ COPY files/container_environment/* /etc/container_environment/
 RUN apt-get update
 RUN apt-get -y install \
   git \
-  default-jre
+  default-jre \
+  golang
 
 
 # Git packages setup
 RUN git clone https://github.com/feangulo/graphite-stresser.git ${WORKDIR}
+
+# Go packages setup
+ENV GOPATH ${WORKDIR}/go
+RUN go get github.com/gorsuch/haggar
 
 # Daemons setup
 RUN mkdir -p /etc/service/graphite-stresser
