@@ -81,7 +81,7 @@ for example, below shows a run using the scheduled mode.
 
 and for accumulation mode
 
-	docker run --net=host -it --name graphite-stresser -e GRAPHITE_STRESSER_MODE=accumulation registry.service.dsd.io/platforms/graphite-stresser:latest 
+	docker run --net=host -it --name graphite-stresser -e GRAPHITE_STRESSER_MODE=accumulate registry.service.dsd.io/platforms/graphite-stresser:latest 
 
 ## Cleaning up
 
