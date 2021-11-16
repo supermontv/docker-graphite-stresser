@@ -1,4 +1,4 @@
-FROM phusion/baseimage
+FROM phusion/baseimage:master-amd64
 MAINTAINER niall_creech@yahoo.co.uk
 
 env WORKDIR /app
